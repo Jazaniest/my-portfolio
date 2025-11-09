@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>M. Abdillah Aljazani | Full-Stack Developer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <title>JZX | Full-Stack Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
   <link rel="icon" href="logoku.ico" type="image/x-icon">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -12,45 +14,14 @@
       theme: {
         extend: {
           fontFamily: {
-            'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+            'sans': ['Space Grotesk', 'sans-serif'],
+            'mono': ['JetBrains Mono', 'monospace'],
           },
           colors: {
-            'primary': {
-              50: '#eff6ff',
-              500: '#3b82f6',
-              600: '#2563eb',
-              700: '#1d4ed8',
-              900: '#1e3a8a'
-            },
-            'dark': {
-              50: '#f8fafc',
-              800: '#1e293b',
-              900: '#0f172a'
+            'accent': {
+              500: '#06b6d4',
+              600: '#0891b2',
             }
-          },
-          animation: {
-            'fade-in-up': 'fadeInUp 0.6s ease-out forwards',
-            'fade-in-down': 'fadeInDown 0.6s ease-out forwards',
-            'bounce-slow': 'bounce 3s infinite',
-            'pulse-slow': 'pulse 4s infinite',
-            'gradient': 'gradient 6s ease infinite',
-          },
-          keyframes: {
-            fadeInUp: {
-              '0%': { opacity: '0', transform: 'translateY(30px)' },
-              '100%': { opacity: '1', transform: 'translateY(0)' }
-            },
-            fadeInDown: {
-              '0%': { opacity: '0', transform: 'translateY(-30px)' },
-              '100%': { opacity: '1', transform: 'translateY(0)' }
-            },
-            gradient: {
-              '0%, 100%': { backgroundPosition: '0% 50%' },
-              '50%': { backgroundPosition: '100% 50%' }
-            }
-          },
-          backgroundSize: {
-            '300%': '300%',
           }
         }
       },
@@ -58,122 +29,88 @@
     }
   </script>
 </head>
-<body class="font-inter bg-white text-gray-900 dark:bg-dark-900 dark:text-white transition-colors duration-300">
-  <!-- Scroll Progress -->
-  <div id="scroll-progress" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-primary-500 to-purple-600 z-50 transition-all duration-300"></div>
+<body class="bg-zinc-950 text-gray-100 font-sans antialiased">
+  
+  <!-- Cursor Follower -->
+  <div id="cursor-glow" class="pointer-events-none fixed w-96 h-96 rounded-full bg-cyan-500/10 blur-3xl transition-all duration-700 ease-out -translate-x-1/2 -translate-y-1/2 z-0"></div>
 
   <!-- Navigation -->
-  <nav class="fixed top-0 w-full bg-white/80 dark:bg-dark-900/80 backdrop-blur-lg border-b border-gray-200 dark:border-gray-800 z-40 transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-16">
-        <!-- Logo -->
-        <a href="#hero" class="text-2xl font-bold bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent hover:scale-105 transition-transform duration-300">
-          Jz.x
+  <nav class="fixed top-0 w-full bg-zinc-950/80 backdrop-blur-xl border-b border-zinc-800/50 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4">
+      <div class="flex justify-between items-center">
+        <a href="#home" class="text-xl font-bold font-mono text-cyan-400 hover:text-cyan-300 transition-colors">
+          &lt;JZX /&gt;
         </a>
-
-        <!-- Desktop Navigation -->
-        <div class="hidden md:flex space-x-8">
-          <a href="#hero" class="nav-link text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-colors duration-300 relative group">
-            Home
-            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-600 group-hover:w-full transition-all duration-300"></span>
-          </a>
-          <a href="#about" class="nav-link text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-colors duration-300 relative group">
-            About
-            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-600 group-hover:w-full transition-all duration-300"></span>
-          </a>
-          <a href="#skills" class="nav-link text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-colors duration-300 relative group">
-            Skills
-            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-600 group-hover:w-full transition-all duration-300"></span>
-          </a>
-          <a href="#projects" class="nav-link text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-colors duration-300 relative group">
-            Projects
-            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-600 group-hover:w-full transition-all duration-300"></span>
-          </a>
-          <a href="#contact" class="nav-link text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-colors duration-300 relative group">
-            Contact
-            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-600 group-hover:w-full transition-all duration-300"></span>
+        
+        <div class="hidden md:flex items-center gap-8">
+          <a href="#about" class="text-gray-400 hover:text-cyan-400 transition-colors text-sm font-medium">About</a>
+          <a href="#skills" class="text-gray-400 hover:text-cyan-400 transition-colors text-sm font-medium">Skills</a>
+          <a href="#projects" class="text-gray-400 hover:text-cyan-400 transition-colors text-sm font-medium">Projects</a>
+          <a href="#contact" class="px-5 py-2 bg-cyan-500/10 hover:bg-cyan-500/20 border border-cyan-500/30 rounded-lg text-cyan-400 text-sm font-medium transition-all">
+            Let's Talk
           </a>
         </div>
 
-        <!-- Actions -->
-        <div class="flex items-center space-x-4">
-          <button id="theme-toggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300">
-            <span class="text-xl">🌙</span>
-          </button>
-          <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="md:hidden fixed inset-0 bg-dark-900/95 backdrop-blur-lg z-30 transform translate-x-full transition-transform duration-300">
-      <div class="flex flex-col items-center justify-center h-full space-y-8">
-        <a href="#hero" class="mobile-link text-2xl font-semibold text-white hover:text-primary-400 transition-colors duration-300">Home</a>
-        <a href="#about" class="mobile-link text-2xl font-semibold text-white hover:text-primary-400 transition-colors duration-300">About</a>
-        <a href="#skills" class="mobile-link text-2xl font-semibold text-white hover:text-primary-400 transition-colors duration-300">Skills</a>
-        <a href="#projects" class="mobile-link text-2xl font-semibold text-white hover:text-primary-400 transition-colors duration-300">Projects</a>
-        <a href="#contact" class="mobile-link text-2xl font-semibold text-white hover:text-primary-400 transition-colors duration-300">Contact</a>
+        <button id="mobile-toggle" class="md:hidden text-gray-400 hover:text-cyan-400">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
       </div>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section id="hero" class="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50 dark:from-dark-900 dark:via-dark-800 dark:to-purple-900">
-    <!-- Animated Background -->
-    <div class="absolute inset-0 overflow-hidden">
-      <div class="absolute top-1/4 left-1/4 w-72 h-72 bg-primary-200 dark:bg-primary-800 rounded-full mix-blend-multiply dark:mix-blend-normal filter blur-xl opacity-70 animate-pulse-slow"></div>
-      <div class="absolute top-1/3 right-1/4 w-72 h-72 bg-purple-200 dark:bg-purple-800 rounded-full mix-blend-multiply dark:mix-blend-normal filter blur-xl opacity-70 animate-pulse-slow animation-delay-2000"></div>
-      <div class="absolute bottom-1/4 left-1/3 w-72 h-72 bg-blue-200 dark:bg-blue-800 rounded-full mix-blend-multiply dark:mix-blend-normal filter blur-xl opacity-70 animate-pulse-slow animation-delay-4000"></div>
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="fixed inset-0 bg-zinc-950/98 backdrop-blur-xl z-40 translate-x-full transition-transform duration-300 md:hidden">
+    <div class="flex flex-col items-center justify-center h-full gap-8">
+      <a href="#about" class="text-2xl text-gray-300 hover:text-cyan-400 transition-colors mobile-link">About</a>
+      <a href="#skills" class="text-2xl text-gray-300 hover:text-cyan-400 transition-colors mobile-link">Skills</a>
+      <a href="#projects" class="text-2xl text-gray-300 hover:text-cyan-400 transition-colors mobile-link">Projects</a>
+      <a href="#contact" class="text-2xl text-gray-300 hover:text-cyan-400 transition-colors mobile-link">Contact</a>
     </div>
+  </div>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      <div class="text-center">
-        <!-- Status Badge -->
-        <div class="inline-flex items-center px-4 py-2 rounded-full bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-300 text-sm font-medium mb-8 opacity-0 animate-fade-in-down animation-delay-200">
-          <div class="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></div>
-          Available for new opportunities
+  <!-- Hero Section -->
+  <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
+    <div class="max-w-6xl mx-auto px-6 py-20 relative z-10">
+      <div class="space-y-8">
+        <div class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/10 border border-emerald-500/30 rounded-full text-emerald-400 text-sm font-medium">
+          <span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
+          Open for collaboration
         </div>
 
-        <!-- Main Title -->
-        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black mb-6 opacity-0 animate-fade-in-up animation-delay-400">
-          Hi, I'm <span class="bg-gradient-to-r from-primary-600 via-purple-600 to-primary-600 bg-300% animate-gradient bg-clip-text text-transparent">Jaza</span>
-        </h1>
+        <div class="space-y-4">
+          <h1 class="text-5xl md:text-7xl font-bold">
+            Hey, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600">JZX</span>
+          </h1>
+          <p class="text-xl md:text-2xl text-gray-400 max-w-2xl">
+            Full-Stack Developer who loves building things with <span class="text-cyan-400 font-semibold">React</span> & <span class="text-green-400 font-semibold">Node.js</span>
+          </p>
+        </div>
 
-        <!-- Subtitle -->
-        <p class="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto opacity-0 animate-fade-in-up animation-delay-600">
-          Full-Stack Developer crafting exceptional digital experiences with modern technologies
-        </p>
-
-        <!-- Code Block -->
-        <div class="bg-gray-900 dark:bg-black rounded-2xl p-6 sm:p-8 mb-8 max-w-2xl mx-auto text-left font-mono text-sm sm:text-base opacity-0 animate-fade-in-up animation-delay-800 shadow-2xl">
-          <div class="flex items-center mb-4">
-            <div class="flex space-x-2">
+        <div class="bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 rounded-2xl p-6 max-w-2xl font-mono text-sm">
+          <div class="flex items-center gap-2 mb-4">
+            <div class="flex gap-2">
               <div class="w-3 h-3 bg-red-500 rounded-full"></div>
               <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
               <div class="w-3 h-3 bg-green-500 rounded-full"></div>
             </div>
-            <span class="ml-4 text-gray-400">portfolio.js</span>
+            <span class="text-gray-500 text-xs">~/portfolio.js</span>
           </div>
-          <div class="text-gray-300">
-            <span class="text-purple-400">const</span> <span class="text-blue-400">developer</span> <span class="text-white">=</span> {<br>
-            &nbsp;&nbsp;<span class="text-red-400">name</span>: <span class="text-green-400">'M Abdillah Aljazani'</span>,<br>
-            &nbsp;&nbsp;<span class="text-red-400">skills</span>: [<span class="text-green-400">'React'</span>, <span class="text-green-400">'Node.js'</span>, <span class="text-green-400">'Next.js'</span>],<br>
-            &nbsp;&nbsp;<span class="text-red-400">passion</span>: <span class="text-green-400">'Building awesome apps! 🚀'</span><br>
-            };
-          </div>
+          <pre class="text-gray-300"><span class="text-purple-400">const</span> <span class="text-blue-400">jzx</span> = {
+  <span class="text-cyan-400">role</span>: <span class="text-green-400">"Full-Stack Developer"</span>,
+  <span class="text-cyan-400">currentFocus</span>: [<span class="text-green-400">"React.js"</span>, <span class="text-green-400">"Node.js"</span>],
+  <span class="text-cyan-400">learning</span>: <span class="text-green-400">"System Security"</span>,
+  <span class="text-cyan-400">funFact</span>: <span class="text-green-400">"Tailwind > Bootstrap 🎨"</span>
+};</pre>
         </div>
 
-        <!-- CTA Buttons -->
-        <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 opacity-0 animate-fade-in-up animation-delay-1000">
-          <a href="#projects" class="w-full sm:w-auto bg-gradient-to-r from-primary-600 to-purple-600 hover:from-primary-700 hover:to-purple-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
-            View My Work
+        <div class="flex flex-wrap gap-4">
+          <a href="#projects" class="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-lg font-semibold transition-all transform hover:scale-105 shadow-lg shadow-cyan-500/25">
+            View Projects
           </a>
-          <a href="https://wa.me/62882006655650" class="w-full sm:w-auto border-2 border-gray-300 dark:border-gray-600 hover:border-primary-600 dark:hover:border-primary-400 text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105">
-            Get In Touch
+          <a href="https://wa.me/6288200665565" class="px-8 py-3 bg-zinc-800/50 hover:bg-zinc-800 border border-zinc-700 rounded-lg font-semibold transition-all">
+            Contact Me
           </a>
         </div>
       </div>
@@ -181,70 +118,74 @@
   </section>
 
   <!-- About Section -->
-  <section id="about" class="py-20 bg-white dark:bg-dark-900">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16">
-        <h2 class="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent mb-4 fade-in">
-          About Me
-        </h2>
-        <div class="w-24 h-1 bg-gradient-to-r from-primary-600 to-purple-600 mx-auto rounded-full fade-in"></div>
-      </div>
+  <section id="about" class="py-24 relative">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div class="space-y-6">
+          <div class="inline-block px-4 py-1 bg-cyan-500/10 border border-cyan-500/30 rounded-full text-cyan-400 text-sm font-medium">
+            About Me
+          </div>
+          <h2 class="text-4xl md:text-5xl font-bold">
+            Crafting Digital <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Experiences</span>
+          </h2>
+          <div class="space-y-4 text-gray-400 text-lg leading-relaxed">
+            <p>
+              I'm a passionate developer who specializes in creating modern web applications. My journey started with JavaScript, and now I build full-stack solutions with React and Node.js.
+            </p>
+            <p>
+              Currently diving deep into <span class="text-cyan-400 font-semibold">System Security</span> to enhance my understanding of building secure applications. I believe in writing clean, maintainable code and always staying curious about new technologies.
+            </p>
+            <p>
+              When I'm not coding, I'm probably exploring open-source projects or experimenting with new frameworks. Always excited to collaborate on interesting projects!
+            </p>
+          </div>
 
-      <div class="grid lg:grid-cols-2 gap-12 items-center">
-        <!-- Text Content -->
-        <div class="space-y-6 fade-in">
-          <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-            I'm a passionate Full-Stack Developer with a keen eye for creating seamless digital experiences. I specialize in modern web technologies and love turning complex problems into simple, beautiful solutions.
-          </p>
-          <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-            When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or sharing knowledge with the developer community.
-          </p>
-          
-          <!-- Stats -->
-          <div class="grid grid-cols-3 gap-6 pt-8">
-            <div class="text-center">
-              <div class="text-3xl font-bold text-primary-600 dark:text-primary-400">5+</div>
-              <div class="text-sm text-gray-600 dark:text-gray-400">Years Experience</div>
+          <div class="grid grid-cols-3 gap-6 pt-6">
+            <div class="space-y-1">
+              <div class="text-3xl font-bold text-cyan-400">2+</div>
+              <div class="text-sm text-gray-500">Years Coding</div>
             </div>
-            <div class="text-center">
-              <div class="text-3xl font-bold text-primary-600 dark:text-primary-400">50+</div>
-              <div class="text-sm text-gray-600 dark:text-gray-400">Projects Completed</div>
+            <div class="space-y-1">
+              <div class="text-3xl font-bold text-cyan-400">15+</div>
+              <div class="text-sm text-gray-500">Projects Done</div>
             </div>
-            <div class="text-center">
-              <div class="text-3xl font-bold text-primary-600 dark:text-primary-400">99%</div>
-              <div class="text-sm text-gray-600 dark:text-gray-400">Client Satisfaction</div>
+            <div class="space-y-1">
+              <div class="text-3xl font-bold text-cyan-400">100%</div>
+              <div class="text-sm text-gray-500">Dedication</div>
             </div>
           </div>
         </div>
 
-        <!-- Timeline -->
-        <div class="fade-in">
-          <div class="relative">
-            <div class="absolute left-4 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary-600 to-purple-600"></div>
-            
-            <div class="space-y-8">
-              <div class="relative flex items-start">
-                <div class="absolute left-2 w-4 h-4 bg-primary-600 border-4 border-white dark:border-dark-900 rounded-full"></div>
-                <div class="ml-12">
-                  <div class="text-primary-600 dark:text-primary-400 font-bold text-lg">2025</div>
-                  <div class="text-gray-600 dark:text-gray-300 mt-1">Mastered React, Next.js, Vue, Node.js, and modern development practices</div>
-                </div>
+        <div class="space-y-4">
+          <div class="bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 rounded-xl p-6 hover:border-cyan-500/30 transition-all group">
+            <div class="flex items-start gap-4">
+              <div class="text-3xl group-hover:scale-110 transition-transform">💼</div>
+              <div>
+                <div class="text-cyan-400 font-semibold mb-1">2022 - Present</div>
+                <div class="text-lg font-semibold mb-2">Full-Stack Developer</div>
+                <div class="text-gray-400 text-sm">RSUD Tengku Rafi'an Siak Project</div>
               </div>
-              
-              <div class="relative flex items-start">
-                <div class="absolute left-2 w-4 h-4 bg-purple-600 border-4 border-white dark:border-dark-900 rounded-full"></div>
-                <div class="ml-12">
-                  <div class="text-purple-600 dark:text-purple-400 font-bold text-lg">2022</div>
-                  <div class="text-gray-600 dark:text-gray-300 mt-1">Joined RSUD Tengku Rafi'an Siak project as Full-Stack Developer</div>
-                </div>
+            </div>
+          </div>
+
+          <div class="bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 rounded-xl p-6 hover:border-cyan-500/30 transition-all group">
+            <div class="flex items-start gap-4">
+              <div class="text-3xl group-hover:scale-110 transition-transform">🎓</div>
+              <div>
+                <div class="text-cyan-400 font-semibold mb-1">Currently Learning</div>
+                <div class="text-lg font-semibold mb-2">System Security</div>
+                <div class="text-gray-400 text-sm">Expanding knowledge in secure coding practices</div>
               </div>
-              
-              <div class="relative flex items-start">
-                <div class="absolute left-2 w-4 h-4 bg-blue-600 border-4 border-white dark:border-dark-900 rounded-full"></div>
-                <div class="ml-12">
-                  <div class="text-blue-600 dark:text-blue-400 font-bold text-lg">2020</div>
-                  <div class="text-gray-600 dark:text-gray-300 mt-1">Started my journey with JavaScript and built my first web application</div>
-                </div>
+            </div>
+          </div>
+
+          <div class="bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 rounded-xl p-6 hover:border-cyan-500/30 transition-all group">
+            <div class="flex items-start gap-4">
+              <div class="text-3xl group-hover:scale-110 transition-transform">🚀</div>
+              <div>
+                <div class="text-cyan-400 font-semibold mb-1">Passion</div>
+                <div class="text-lg font-semibold mb-2">Open Source Collaboration</div>
+                <div class="text-gray-400 text-sm">Love contributing to community projects</div>
               </div>
             </div>
           </div>
@@ -254,284 +195,487 @@
   </section>
 
   <!-- Skills Section -->
-  <section id="skills" class="py-20 bg-gray-50 dark:bg-dark-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16">
-        <h2 class="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent mb-4 fade-in">
-          Skills & Technologies
+  <section id="skills" class="py-24 relative">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16 space-y-4">
+        <div class="inline-block px-4 py-1 bg-cyan-500/10 border border-cyan-500/30 rounded-full text-cyan-400 text-sm font-medium">
+          Tech Stack
+        </div>
+        <h2 class="text-4xl md:text-5xl font-bold">
+          Technologies I <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Work With</span>
         </h2>
-        <div class="w-24 h-1 bg-gradient-to-r from-primary-600 to-purple-600 mx-auto rounded-full fade-in"></div>
       </div>
 
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- React -->
-        <div class="group bg-white dark:bg-dark-900 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 fade-in">
-          <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-            <span class="text-2xl">⚛️</span>
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Frontend -->
+        <div class="space-y-4">
+          <h3 class="text-xl font-semibold text-cyan-400 mb-6">Frontend Development</h3>
+          
+          <div class="bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 rounded-xl p-6 hover:border-cyan-500/30 transition-all group">
+            <div class="flex items-center justify-between mb-3">
+              <div class="flex items-center gap-3">
+                <span class="text-2xl">
+                  <i class="devicon-react-original colored"></i>
+                </span>
+                <span class="font-semibold">React.js</span>
+              </div>
+              <span class="text-cyan-400 text-sm font-medium">Advanced</span>
+            </div>
+            <div class="w-full bg-zinc-800 rounded-full h-2">
+              <div class="bg-gradient-to-r from-cyan-500 to-blue-600 h-2 rounded-full" style="width: 92%"></div>
+            </div>
           </div>
-          <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">React.js</h3>
-          <p class="text-gray-600 dark:text-gray-300 mb-4">Advanced - Building complex SPAs</p>
-          <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-            <div class="bg-gradient-to-r from-blue-500 to-blue-600 h-2 rounded-full w-11/12"></div>
+
+          <div class="bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 rounded-xl p-6 hover:border-cyan-500/30 transition-all group">
+            <div class="flex items-center justify-between mb-3">
+              <div class="flex items-center gap-3">
+                <span class="text-2xl">
+                  <i class="devicon-astro-plain colored"></i>
+                </span>
+                <span class="font-semibold">Astro</span>
+              </div>
+              <span class="text-cyan-400 text-sm font-medium">Intermediate</span>
+            </div>
+            <div class="w-full bg-zinc-800 rounded-full h-2">
+              <div class="bg-gradient-to-r from-cyan-500 to-blue-600 h-2 rounded-full" style="width: 78%"></div>
+            </div>
+          </div>
+
+          <div class="bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 rounded-xl p-6 hover:border-cyan-500/30 transition-all group">
+            <div class="flex items-center justify-between mb-3">
+              <div class="flex items-center gap-3">
+                <span class="text-2xl">
+                  <i class="devicon-javascript-plain colored"></i>
+                </span>
+                <span class="font-semibold">JavaScript</span>
+              </div>
+              <span class="text-cyan-400 text-sm font-medium">Expert</span>
+            </div>
+            <div class="w-full bg-zinc-800 rounded-full h-2">
+              <div class="bg-gradient-to-r from-yellow-500 to-orange-600 h-2 rounded-full" style="width: 95%"></div>
+            </div>
+          </div>
+
+          <div class="bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 rounded-xl p-6 hover:border-cyan-500/30 transition-all group">
+            <div class="flex items-center justify-between mb-3">
+              <div class="flex items-center gap-3">
+                <span class="text-2xl">
+                  <i class="devicon-tailwindcss-original colored"></i>
+                </span>
+                <span class="font-semibold">Tailwind CSS</span>
+              </div>
+              <span class="text-cyan-400 text-sm font-medium">Advanced</span>
+            </div>
+            <div class="w-full bg-zinc-800 rounded-full h-2">
+              <div class="bg-gradient-to-r from-cyan-500 to-blue-600 h-2 rounded-full" style="width: 90%"></div>
+            </div>
+          </div>
+
+          <div class="bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 rounded-xl p-6 hover:border-cyan-500/30 transition-all group">
+            <div class="flex items-center justify-between mb-3">
+              <div class="flex items-center gap-3">
+                <span class="text-2xl">
+                  <i class="devicon-html5-plain-wordmark colored"></i>
+                </span>
+                <span class="font-semibold">HTML</span>
+              </div>
+              <span class="text-cyan-400 text-sm font-medium">Expert</span>
+            </div>
+            <div class="w-full bg-zinc-800 rounded-full h-2">
+              <div class="bg-gradient-to-r from-orange-500 to-red-600 h-2 rounded-full" style="width: 95%"></div>
+            </div>
+          </div>
+
+          <div class="bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 rounded-xl p-6 hover:border-cyan-500/30 transition-all group">
+            <div class="flex items-center justify-between mb-3">
+              <div class="flex items-center gap-3">
+                <span class="text-2xl">
+                  <i class="devicon-css3-plain-wordmark colored"></i>
+                </span>
+                <span class="font-semibold">CSS3</span>
+              </div>
+              <span class="text-cyan-400 text-sm font-medium">Expert</span>
+            </div>
+            <div class="w-full bg-zinc-800 rounded-full h-2">
+              <div class="bg-gradient-to-r from-orange-500 to-red-600 h-2 rounded-full" style="width: 95%"></div>
+            </div>
           </div>
         </div>
 
-        <!-- Next.js -->
-        <div class="group bg-white dark:bg-dark-900 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 fade-in">
-          <div class="w-16 h-16 bg-gradient-to-br from-gray-800 to-black rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-            <span class="text-2xl">🚀</span>
+        <!-- Backend & Database -->
+        <div class="space-y-4">
+          <h3 class="text-xl font-semibold text-cyan-400 mb-6">Backend & Database</h3>
+          
+          <div class="bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 rounded-xl p-6 hover:border-cyan-500/30 transition-all group">
+            <div class="flex items-center justify-between mb-3">
+              <div class="flex items-center gap-3">
+                <span class="text-2xl">
+                  <i class="devicon-nodejs-plain-wordmark colored"></i>
+                </span>
+                <span class="font-semibold">Node.js</span>
+              </div>
+              <span class="text-cyan-400 text-sm font-medium">Advanced</span>
+            </div>
+            <div class="w-full bg-zinc-800 rounded-full h-2">
+              <div class="bg-gradient-to-r from-green-500 to-emerald-600 h-2 rounded-full" style="width: 90%"></div>
+            </div>
           </div>
-          <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">Next.js</h3>
-          <p class="text-gray-600 dark:text-gray-300 mb-4">Advanced - SSR & Full-stack apps</p>
-          <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-            <div class="bg-gradient-to-r from-gray-800 to-black h-2 rounded-full w-11/12"></div>
+
+          <div class="bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 rounded-xl p-6 hover:border-cyan-500/30 transition-all group">
+            <div class="flex items-center justify-between mb-3">
+              <div class="flex items-center gap-3">
+                <span class="text-2xl">
+                  <i class="devicon-npm-original-wordmark colored"></i>
+                </span>
+                <span class="font-semibold">NPM</span>
+              </div>
+              <span class="text-cyan-400 text-sm font-medium">Advanced</span>
+            </div>
+            <div class="w-full bg-zinc-800 rounded-full h-2">
+              <div class="bg-gradient-to-r from-green-500 to-emerald-600 h-2 rounded-full" style="width: 90%"></div>
+            </div>
+          </div>
+
+          <div class="bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 rounded-xl p-6 hover:border-cyan-500/30 transition-all group">
+            <div class="flex items-center justify-between mb-3">
+              <div class="flex items-center gap-3">
+                <span class="text-2xl">
+                  <i class="devicon-express-original colored"></i>
+                </span>
+                <span class="font-semibold">Express.js</span>
+              </div>
+              <span class="text-cyan-400 text-sm font-medium">Advanced</span>
+            </div>
+            <div class="w-full bg-zinc-800 rounded-full h-2">
+              <div class="bg-gradient-to-r from-gray-600 to-gray-800 h-2 rounded-full" style="width: 88%"></div>
+            </div>
+          </div>
+
+          <div class="bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 rounded-xl p-6 hover:border-cyan-500/30 transition-all group">
+            <div class="flex items-center justify-between mb-3">
+              <div class="flex items-center gap-3">
+                <span class="text-2xl">
+                  <i class="devicon-postgresql-plain colored"></i>
+                </span>
+                <span class="font-semibold">PostgreSQL</span>
+              </div>
+              <span class="text-cyan-400 text-sm font-medium">Intermediate</span>
+            </div>
+            <div class="w-full bg-zinc-800 rounded-full h-2">
+              <div class="bg-gradient-to-r from-blue-500 to-indigo-600 h-2 rounded-full" style="width: 80%"></div>
+            </div>
+          </div>
+
+          <div class="bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 rounded-xl p-6 hover:border-cyan-500/30 transition-all group">
+            <div class="flex items-center justify-between mb-3">
+              <div class="flex items-center gap-3">
+                <span class="text-2xl">
+                  <i class="devicon-mysql-original colored"></i>
+                </span>
+                <span class="font-semibold">MySQL</span>
+              </div>
+              <span class="text-cyan-400 text-sm font-medium">Advanced</span>
+            </div>
+            <div class="w-full bg-zinc-800 rounded-full h-2">
+              <div class="bg-gradient-to-r from-blue-600 to-cyan-600 h-2 rounded-full" style="width: 90%"></div>
+            </div>
+          </div>
+
+          <div class="bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 rounded-xl p-6 hover:border-cyan-500/30 transition-all group">
+            <div class="flex items-center justify-between mb-3">
+              <div class="flex items-center gap-3">
+                <span class="text-2xl">
+                  <i class="devicon-git-plain colored"></i>
+                </span>
+                <span class="font-semibold">Git</span>
+              </div>
+              <span class="text-cyan-400 text-sm font-medium">Advanced</span>
+            </div>
+            <div class="w-full bg-zinc-800 rounded-full h-2">
+              <div class="bg-gradient-to-r from-purple-500 to-pink-600 h-2 rounded-full" style="width: 92%"></div>
+            </div>
+          </div>
+
+          <div class="bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 rounded-xl p-6 hover:border-cyan-500/30 transition-all group">
+            <div class="flex items-center justify-between mb-3">
+              <div class="flex items-center gap-3">
+                <span class="text-2xl">
+                  <i class="devicon-github-original colored"></i>
+                </span>
+                <span class="font-semibold">Github</span>
+              </div>
+              <span class="text-cyan-400 text-sm font-medium">Advanced</span>
+            </div>
+            <div class="w-full bg-zinc-800 rounded-full h-2">
+              <div class="bg-gradient-to-r from-purple-500 to-pink-600 h-2 rounded-full" style="width: 92%"></div>
+            </div>
           </div>
         </div>
+      </div>
 
-        <!-- Vue.js -->
-        <div class="group bg-white dark:bg-dark-900 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 fade-in">
-          <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-            <span class="text-2xl">💚</span>
-          </div>
-          <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">Vue.js</h3>
-          <p class="text-gray-600 dark:text-gray-300 mb-4">Intermediate - Component-based UIs</p>
-          <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-            <div class="bg-gradient-to-r from-green-500 to-green-600 h-2 rounded-full w-4/5"></div>
-          </div>
+      <!-- Additional Skills -->
+      <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="bg-zinc-900/30 backdrop-blur-sm border border-zinc-800 rounded-lg p-4 text-center hover:border-cyan-500/30 transition-all">
+          <span class="text-2xl mb-2 block">
+            <i class="devicon-php-plain colored"></i>
+          </span>
+          <span class="text-sm text-gray-400">PHP</span>
         </div>
-
-        <!-- Node.js -->
-        <div class="group bg-white dark:bg-dark-900 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 fade-in">
-          <div class="w-16 h-16 bg-gradient-to-br from-green-600 to-green-700 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-            <span class="text-2xl">🟢</span>
-          </div>
-          <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">Node.js</h3>
-          <p class="text-gray-600 dark:text-gray-300 mb-4">Advanced - REST APIs & Backend</p>
-          <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-            <div class="bg-gradient-to-r from-green-600 to-green-700 h-2 rounded-full w-11/12"></div>
-          </div>
+        <div class="bg-zinc-900/30 backdrop-blur-sm border border-zinc-800 rounded-lg p-4 text-center hover:border-cyan-500/30 transition-all">
+          <span class="text-2xl mb-2 block">
+            <i class="devicon-laravel-original colored"></i>
+          </span>
+          <span class="text-sm text-gray-400">Laravel</span>
         </div>
-
-        <!-- Tailwind CSS -->
-        <div class="group bg-white dark:bg-dark-900 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 fade-in">
-          <div class="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-            <span class="text-2xl">🎨</span>
-          </div>
-          <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">Tailwind CSS</h3>
-          <p class="text-gray-600 dark:text-gray-300 mb-4">Advanced - Responsive design</p>
-          <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-            <div class="bg-gradient-to-r from-cyan-500 to-blue-500 h-2 rounded-full w-11/12"></div>
-          </div>
+        <div class="bg-zinc-900/30 backdrop-blur-sm border border-zinc-800 rounded-lg p-4 text-center hover:border-cyan-500/30 transition-all">
+          <span class="text-2xl mb-2 block">
+            <i class="devicon-figma-plain colored"></i>
+          </span>
+          <span class="text-sm text-gray-400">Figma</span>
         </div>
-
-        <!-- Databases -->
-        <div class="group bg-white dark:bg-dark-900 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 fade-in">
-          <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-            <span class="text-2xl">🗃️</span>
-          </div>
-          <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">Databases</h3>
-          <p class="text-gray-600 dark:text-gray-300 mb-4">MongoDB, PostgreSQL, MySQL</p>
-          <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-            <div class="bg-gradient-to-r from-orange-500 to-red-500 h-2 rounded-full w-5/6"></div>
-          </div>
+        <div class="bg-zinc-900/30 backdrop-blur-sm border border-zinc-800 rounded-lg p-4 text-center hover:border-cyan-500/30 transition-all">
+          <span class="text-2xl mb-2 block">
+            <i class="devicon-linux-plain"></i>
+          </span>
+          <span class="text-sm text-gray-400">Linux</span>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Projects Section -->
-  <section id="projects" class="py-20 bg-white dark:bg-dark-900">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16">
-        <h2 class="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent mb-4 fade-in">
-          Featured Projects
+  <section id="projects" class="py-24 relative">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16 space-y-4">
+        <div class="inline-block px-4 py-1 bg-cyan-500/10 border border-cyan-500/30 rounded-full text-cyan-400 text-sm font-medium">
+          My Work
+        </div>
+        <h2 class="text-4xl md:text-5xl font-bold">
+          Featured <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Projects</span>
         </h2>
-        <div class="w-24 h-1 bg-gradient-to-r from-primary-600 to-purple-600 mx-auto rounded-full fade-in"></div>
       </div>
 
-      <div class="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
-        <!-- Healthcare Project -->
-        <div class="group bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-dark-800 dark:to-blue-900/20 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 fade-in">
-          <div class="h-48 bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-6xl text-white">
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Project 1 -->
+        <div class="group bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 rounded-2xl overflow-hidden hover:border-cyan-500/30 transition-all">
+          <div class="h-48 bg-gradient-to-br from-blue-600 to-cyan-600 flex items-center justify-center text-6xl">
             🏥
           </div>
-          <div class="p-8">
-            <h3 class="text-2xl font-bold mb-3 text-gray-900 dark:text-white">RSUD Tengku Rafi'an Siak</h3>
-            <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-              Comprehensive healthcare management system for the nursing department. Features include patient management, scheduling, and real-time notifications.
-            </p>
-            <div class="flex flex-wrap gap-2 mb-6">
-              <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full text-sm font-medium">React</span>
-              <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-300 rounded-full text-sm font-medium">Next.js</span>
-              <span class="px-3 py-1 bg-cyan-100 dark:bg-cyan-900/30 text-cyan-800 dark:text-cyan-300 rounded-full text-sm font-medium">Tailwind</span>
-              <span class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 rounded-full text-sm font-medium">Node.js</span>
+          <div class="p-6 space-y-4">
+            <div class="flex items-center gap-2">
+              <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/30 rounded-full text-blue-400 text-xs font-medium">Healthcare</span>
+              <span class="px-3 py-1 bg-green-500/10 border border-green-500/30 rounded-full text-green-400 text-xs font-medium">Professional</span>
             </div>
-            <div class="flex space-x-4">
-              <a href="#" class="flex-1 bg-gradient-to-r from-primary-600 to-purple-600 hover:from-primary-700 hover:to-purple-700 text-white px-4 py-3 rounded-xl font-semibold text-center transition-all duration-300 transform hover:scale-105">
-                Live Demo
-              </a>
-              <a href="#" class="flex-1 border-2 border-gray-300 dark:border-gray-600 hover:border-primary-600 text-gray-700 dark:text-gray-300 hover:text-primary-600 px-4 py-3 rounded-xl font-semibold text-center transition-all duration-300">
-                View Code
-              </a>
+            <h3 class="text-2xl font-bold group-hover:text-cyan-400 transition-colors">RSUD Tengku Rafi'an Siak</h3>
+            <p class="text-gray-400 leading-relaxed">
+              Healthcare management system for nursing department. Built with React and Node.js, featuring patient management, real-time notifications, and comprehensive reporting.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-zinc-800 rounded-lg text-xs text-cyan-400">React.js</span>
+              <span class="px-3 py-1 bg-zinc-800 rounded-lg text-xs text-green-400">Node.js</span>
+              <span class="px-3 py-1 bg-zinc-800 rounded-lg text-xs text-blue-400">MySQL</span>
+              <span class="px-3 py-1 bg-zinc-800 rounded-lg text-xs text-purple-400">Express</span>
+            </div>
+            <div class="flex gap-4 pt-4">
+              <button class="flex-1 px-4 py-2 bg-cyan-500/10 hover:bg-cyan-500/20 border border-cyan-500/30 rounded-lg text-cyan-400 font-medium transition-all text-sm">
+                View Demo
+              </button>
+              <button class="flex-1 px-4 py-2 bg-zinc-800 hover:bg-zinc-700 rounded-lg text-gray-300 font-medium transition-all text-sm">
+                Source Code
+              </button>
             </div>
           </div>
         </div>
 
-        <!-- E-Commerce Project -->
-        <div class="group bg-gradient-to-br from-green-50 to-emerald-50 dark:from-dark-800 dark:to-green-900/20 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 fade-in">
-          <div class="h-48 bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center text-6xl text-white">
-            📱
+        <!-- Project 2 -->
+        <div class="group bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 rounded-2xl overflow-hidden hover:border-cyan-500/30 transition-all">
+          <div class="h-48 bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center text-6xl">
+            🛒
           </div>
-          <div class="p-8">
-            <h3 class="text-2xl font-bold mb-3 text-gray-900 dark:text-white">E-Commerce Platform</h3>
-            <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-              Modern e-commerce solution with shopping cart, payment integration, and admin dashboard. Built with performance and user experience in mind.
-            </p>
-            <div class="flex flex-wrap gap-2 mb-6">
-              <span class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 rounded-full text-sm font-medium">Vue.js</span>
-              <span class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 rounded-full text-sm font-medium">Node.js</span>
-              <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-800 dark:text-orange-300 rounded-full text-sm font-medium">MongoDB</span>
-              <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300 rounded-full text-sm font-medium">Stripe</span>
+          <div class="p-6 space-y-4">
+            <div class="flex items-center gap-2">
+              <span class="px-3 py-1 bg-purple-500/10 border border-purple-500/30 rounded-full text-purple-400 text-xs font-medium">E-Commerce</span>
+              <span class="px-3 py-1 bg-yellow-500/10 border border-yellow-500/30 rounded-full text-yellow-400 text-xs font-medium">Personal</span>
             </div>
-            <div class="flex space-x-4">
-              <a href="#" class="flex-1 bg-gradient-to-r from-primary-600 to-purple-600 hover:from-primary-700 hover:to-purple-700 text-white px-4 py-3 rounded-xl font-semibold text-center transition-all duration-300 transform hover:scale-105">
-                Live Demo
-              </a>
-              <a href="#" class="flex-1 border-2 border-gray-300 dark:border-gray-600 hover:border-primary-600 text-gray-700 dark:text-gray-300 hover:text-primary-600 px-4 py-3 rounded-xl font-semibold text-center transition-all duration-300">
-                View Code
-              </a>
+            <h3 class="text-2xl font-bold group-hover:text-cyan-400 transition-colors">Online Store Platform</h3>
+            <p class="text-gray-400 leading-relaxed">
+              Full-featured e-commerce platform with shopping cart, payment integration, order management, and admin dashboard. Built for scalability and performance.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-zinc-800 rounded-lg text-xs text-cyan-400">React.js</span>
+              <span class="px-3 py-1 bg-zinc-800 rounded-lg text-xs text-green-400">Node.js</span>
+              <span class="px-3 py-1 bg-zinc-800 rounded-lg text-xs text-blue-400">PostgreSQL</span>
+              <span class="px-3 py-1 bg-zinc-800 rounded-lg text-xs text-orange-400">Tailwind</span>
+            </div>
+            <div class="flex gap-4 pt-4">
+              <button class="flex-1 px-4 py-2 bg-cyan-500/10 hover:bg-cyan-500/20 border border-cyan-500/30 rounded-lg text-cyan-400 font-medium transition-all text-sm">
+                View Demo
+              </button>
+              <button class="flex-1 px-4 py-2 bg-zinc-800 hover:bg-zinc-700 rounded-lg text-gray-300 font-medium transition-all text-sm">
+                Source Code
+              </button>
             </div>
           </div>
         </div>
 
-        <!-- Task Management Project -->
-        <div class="group bg-gradient-to-br from-purple-50 to-pink-50 dark:from-dark-800 dark:to-purple-900/20 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 fade-in">
-          <div class="h-48 bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center text-6xl text-white">
-            💼
+        <!-- Project 3 -->
+        <div class="group bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 rounded-2xl overflow-hidden hover:border-cyan-500/30 transition-all">
+          <div class="h-48 bg-gradient-to-br from-green-600 to-emerald-600 flex items-center justify-center text-6xl">
+            ✅
           </div>
-          <div class="p-8">
-            <h3 class="text-2xl font-bold mb-3 text-gray-900 dark:text-white">Task Management App</h3>
-            <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-              Collaborative task management application with real-time updates, team collaboration features, and productivity analytics.
-            </p>
-            <div class="flex flex-wrap gap-2 mb-6">
-              <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full text-sm font-medium">React</span>
-              <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-300 rounded-full text-sm font-medium">Socket.io</span>
-              <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full text-sm font-medium">PostgreSQL</span>
-              <span class="px-3 py-1 bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-300 rounded-full text-sm font-medium">Redis</span>
+          <div class="p-6 space-y-4">
+            <div class="flex items-center gap-2">
+              <span class="px-3 py-1 bg-green-500/10 border border-green-500/30 rounded-full text-green-400 text-xs font-medium">Productivity</span>
+              <span class="px-3 py-1 bg-cyan-500/10 border border-cyan-500/30 rounded-full text-cyan-400 text-xs font-medium">Side Project</span>
             </div>
-            <div class="flex space-x-4">
-              <a href="#" class="flex-1 bg-gradient-to-r from-primary-600 to-purple-600 hover:from-primary-700 hover:to-purple-700 text-white px-4 py-3 rounded-xl font-semibold text-center transition-all duration-300 transform hover:scale-105">
-                Live Demo
-              </a>
-              <a href="#" class="flex-1 border-2 border-gray-300 dark:border-gray-600 hover:border-primary-600 text-gray-700 dark:text-gray-300 hover:text-primary-600 px-4 py-3 rounded-xl font-semibold text-center transition-all duration-300">
-                View Code
-              </a>
+            <h3 class="text-2xl font-bold group-hover:text-cyan-400 transition-colors">Task Management App</h3>
+            <p class="text-gray-400 leading-relaxed">
+              Modern task management application with drag-and-drop functionality, categories, priorities, and deadline tracking. Clean UI with smooth animations.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-zinc-800 rounded-lg text-xs text-cyan-400">React.js</span>
+              <span class="px-3 py-1 bg-zinc-800 rounded-lg text-xs text-green-400">Node.js</span>
+              <span class="px-3 py-1 bg-zinc-800 rounded-lg text-xs text-orange-400">Tailwind</span>
+              <span class="px-3 py-1 bg-zinc-800 rounded-lg text-xs text-blue-400">MySQL</span>
+            </div>
+            <div class="flex gap-4 pt-4">
+              <button class="flex-1 px-4 py-2 bg-cyan-500/10 hover:bg-cyan-500/20 border border-cyan-500/30 rounded-lg text-cyan-400 font-medium transition-all text-sm">
+                View Demo
+              </button>
+              <button class="flex-1 px-4 py-2 bg-zinc-800 hover:bg-zinc-700 rounded-lg text-gray-300 font-medium transition-all text-sm">
+                Source Code
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="group bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 rounded-2xl overflow-hidden hover:border-cyan-500/30 transition-all">
+          <div class="h-48 bg-gradient-to-br from-orange-600 to-red-600 flex items-center justify-center text-6xl">
+            📝
+          </div>
+          <div class="p-6 space-y-4">
+            <div class="flex items-center gap-2">
+              <span class="px-3 py-1 bg-orange-500/10 border border-orange-500/30 rounded-full text-orange-400 text-xs font-medium">Blog</span>
+              <span class="px-3 py-1 bg-cyan-500/10 border border-cyan-500/30 rounded-full text-cyan-400 text-xs font-medium">Learning</span>
+            </div>
+            <h3 class="text-2xl font-bold group-hover:text-cyan-400 transition-colors">Personal Blog Platform</h3>
+            <p class="text-gray-400 leading-relaxed">
+              Modern blogging platform with markdown support, categories, tags, and comment system. Features include rich text editor and responsive design.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-zinc-800 rounded-lg text-xs text-cyan-400">React.js</span>
+              <span class="px-3 py-1 bg-zinc-800 rounded-lg text-xs text-green-400">Express.js</span>
+              <span class="px-3 py-1 bg-zinc-800 rounded-lg text-xs text-blue-400">PostgreSQL</span>
+              <span class="px-3 py-1 bg-zinc-800 rounded-lg text-xs text-purple-400">Markdown</span>
+            </div>
+            <div class="flex gap-4 pt-4">
+              <button class="flex-1 px-4 py-2 bg-cyan-500/10 hover:bg-cyan-500/20 border border-cyan-500/30 rounded-lg text-cyan-400 font-medium transition-all text-sm">
+                View Demo
+              </button>
+              <button class="flex-1 px-4 py-2 bg-zinc-800 hover:bg-zinc-700 rounded-lg text-gray-300 font-medium transition-all text-sm">
+                Source Code
+              </button>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- View All Projects Button -->
-      <div class="text-center mt-12 fade-in">
-        <a href="#" class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-700 hover:from-primary-600 hover:to-purple-600 text-gray-800 dark:text-gray-200 hover:text-white rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 group">
-          View All Projects
-          <svg class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-          </svg>
+      <!-- GitHub CTA -->
+      <div class="mt-12 text-center">
+        <a href="https://github.com/Jazaniest" class="inline-flex items-center gap-2 px-8 py-3 bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 rounded-lg font-medium transition-all group">
+          <span>View More on GitHub</span>
+          <i class="devicon-github-original"></i>
         </a>
       </div>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="py-20 bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50 dark:from-dark-800 dark:via-dark-800 dark:to-purple-900/20">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16">
-        <h2 class="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent mb-4 fade-in">
-          Let's Work Together
+  <section id="contact" class="py-24 relative">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-16 space-y-4">
+        <div class="inline-block px-4 py-1 bg-cyan-500/10 border border-cyan-500/30 rounded-full text-cyan-400 text-sm font-medium">
+          Get In Touch
+        </div>
+        <h2 class="text-4xl md:text-5xl font-bold">
+          Let's Build Something <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Amazing</span>
         </h2>
-        <div class="w-24 h-1 bg-gradient-to-r from-primary-600 to-purple-600 mx-auto rounded-full fade-in"></div>
-        <p class="text-xl text-gray-600 dark:text-gray-300 mt-6 fade-in">
-          Ready to bring your ideas to life? Let's create something amazing together.
+        <p class="text-xl text-gray-400 max-w-2xl mx-auto">
+          Have a project in mind? Let's collaborate and create something extraordinary together.
         </p>
       </div>
 
-      <div class="grid lg:grid-cols-2 gap-12 items-start">
+      <div class="grid md:grid-cols-2 gap-8">
         <!-- Contact Form -->
-        <div class="bg-white dark:bg-dark-900 rounded-3xl p-8 shadow-xl fade-in">
+        <div class="bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 rounded-2xl p-8">
           <form id="contact-form" class="space-y-6">
             <div>
-              <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Your Name</label>
-              <input type="text" name="name" required class="w-full px-4 py-3 bg-gray-50 dark:bg-dark-800 border border-gray-200 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300 text-gray-900 dark:text-white">
+              <label class="block text-sm font-medium text-gray-300 mb-2">Your Name</label>
+              <input type="text" name="name" required class="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 outline-none transition-all text-white">
             </div>
             <div>
-              <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Your Email</label>
-              <input type="email" name="email" required class="w-full px-4 py-3 bg-gray-50 dark:bg-dark-800 border border-gray-200 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300 text-gray-900 dark:text-white">
+              <label class="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
+              <input type="email" name="email" required class="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 outline-none transition-all text-white">
             </div>
             <div>
-              <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Your Message</label>
-              <textarea name="message" required rows="6" class="w-full px-4 py-3 bg-gray-50 dark:bg-dark-800 border border-gray-200 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300 text-gray-900 dark:text-white resize-none"></textarea>
+              <label class="block text-sm font-medium text-gray-300 mb-2">Your Message</label>
+              <textarea name="message" required rows="5" class="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 outline-none transition-all text-white resize-none"></textarea>
             </div>
-            <button type="submit" class="w-full bg-gradient-to-r from-primary-600 to-purple-600 hover:from-primary-700 hover:to-purple-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
+            <button type="submit" class="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-lg font-semibold transition-all transform hover:scale-105 shadow-lg shadow-cyan-500/25">
               Send Message
             </button>
           </form>
         </div>
 
         <!-- Contact Info -->
-        <div class="space-y-8 fade-in">
-          <!-- Contact Cards -->
-          <div class="bg-white dark:bg-dark-900 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
-            <div class="flex items-center space-x-4">
-              <div class="w-12 h-12 bg-gradient-to-br from-primary-500 to-purple-600 rounded-xl flex items-center justify-center text-white text-xl">
-                ✉️
+        <div class="space-y-6">
+          <div class="bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 rounded-2xl p-6 hover:border-cyan-500/30 transition-all group">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 bg-gradient-to-br from-red-500 to-pink-600 rounded-lg flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+                <i class="fa-solid fa-envelope"></i>
               </div>
               <div>
-                <h3 class="font-semibold text-gray-900 dark:text-white">Email</h3>
-                <p class="text-gray-600 dark:text-gray-300">abdillah@example.com</p>
+                <div class="text-sm text-gray-400 mb-1">Email</div>
+                <a href="mailto:jazaniezt07@gmail.com" class="text-lg font-medium hover:text-cyan-400 transition-colors">jazaniezt07@gmail.com</a>
               </div>
             </div>
           </div>
 
-          <div class="bg-white dark:bg-dark-900 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
-            <div class="flex items-center space-x-4">
-              <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center text-white text-xl">
-                📱
+          <div class="bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 rounded-2xl p-6 hover:border-cyan-500/30 transition-all group">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+                <i class="fa-brands fa-whatsapp"></i>
               </div>
               <div>
-                <h3 class="font-semibold text-gray-900 dark:text-white">WhatsApp</h3>
-                <p class="text-gray-600 dark:text-gray-300">+62 882 0066 55650</p>
+                <div class="text-sm text-gray-400 mb-1">WhatsApp</div>
+                <a href="https://wa.me/6288200665565" class="text-lg font-medium hover:text-cyan-400 transition-colors">+62 882 0066 55650</a>
               </div>
             </div>
           </div>
 
-          <div class="bg-white dark:bg-dark-900 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
-            <div class="flex items-center space-x-4">
-              <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center text-white text-xl">
-                🌐
+          <div class="bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 rounded-2xl p-6 hover:border-cyan-500/30 transition-all group">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 bg-gradient-to-br from-gray-700 to-black rounded-lg flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+                <i class="devicon-githubcodespaces-plain"></i>
               </div>
               <div>
-                <h3 class="font-semibold text-gray-900 dark:text-white">Location</h3>
-                <p class="text-gray-600 dark:text-gray-300">Bandung, West Java, ID</p>
+                <div class="text-sm text-gray-400 mb-1">GitHub</div>
+                <a href="https://github.com/Jazaniest" class="text-lg font-medium hover:text-cyan-400 transition-colors">@Jazaniest</a>
               </div>
             </div>
           </div>
 
-          <!-- Social Links -->
-          <div class="flex space-x-4 pt-6">
-            <a href="mailto:abdillah@example.com" class="w-12 h-12 bg-gradient-to-br from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700 rounded-xl flex items-center justify-center text-white text-xl transition-all duration-300 transform hover:scale-110 hover:shadow-lg">
-              ✉️
-            </a>
-            <a href="#" class="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 rounded-xl flex items-center justify-center text-white text-xl transition-all duration-300 transform hover:scale-110 hover:shadow-lg">
-              💼
-            </a>
-            <a href="#" class="w-12 h-12 bg-gradient-to-br from-gray-800 to-black hover:from-gray-900 hover:to-gray-800 rounded-xl flex items-center justify-center text-white text-xl transition-all duration-300 transform hover:scale-110 hover:shadow-lg">
-              🐙
-            </a>
-            <a href="#" class="w-12 h-12 bg-gradient-to-br from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 rounded-xl flex items-center justify-center text-white text-xl transition-all duration-300 transform hover:scale-110 hover:shadow-lg">
-              📸
-            </a>
+          <div class="bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 rounded-2xl p-6 hover:border-cyan-500/30 transition-all group">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div>
+                <div class="text-sm text-gray-400 mb-1">Location</div>
+                <div class="text-lg font-medium">Indonesia</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -539,113 +683,127 @@
   </section>
 
   <!-- Footer -->
-  <footer class="bg-dark-900 text-white py-12">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid md:grid-cols-4 gap-8 mb-8">
-        <!-- Brand -->
-        <div class="md:col-span-2">
-          <a href="#hero" class="text-3xl font-bold bg-gradient-to-r from-primary-400 to-purple-400 bg-clip-text text-transparent mb-4 block">
-            Jz.x
+  <footer class="py-12 border-t border-zinc-800">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-3 gap-8 mb-8">
+        <div class="space-y-4">
+          <a href="#home" class="text-2xl font-bold font-mono text-cyan-400 hover:text-cyan-300 transition-colors">
+            &lt;JZX /&gt;
           </a>
-          <p class="text-gray-400 mb-4 max-w-md">
-            Full-Stack Developer passionate about creating exceptional digital experiences with modern technologies.
+          <p class="text-gray-400 text-sm">
+            Full-Stack Developer passionate about creating exceptional web experiences with React and Node.js.
           </p>
-          <div class="flex space-x-4">
-            <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-primary-600 rounded-lg flex items-center justify-center transition-colors duration-300">
-              <span class="text-sm">💼</span>
+          <div class="flex gap-3">
+            <a href="https://github.com/Jazaniest" class="w-10 h-10 bg-zinc-800 hover:bg-zinc-700 rounded-lg flex items-center justify-center transition-all hover:scale-110">
+              <i class="devicon-github-original"></i>
             </a>
-            <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-primary-600 rounded-lg flex items-center justify-center transition-colors duration-300">
-              <span class="text-sm">🐙</span>
+            <a href="mailto:jazaniezt07@gmail.com" class="w-10 h-10 bg-zinc-800 hover:bg-zinc-700 rounded-lg flex items-center justify-center transition-all hover:scale-110">
+              <i class="fa-solid fa-envelope"></i>
             </a>
-            <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-primary-600 rounded-lg flex items-center justify-center transition-colors duration-300">
-              <span class="text-sm">📸</span>
+            <a href="https://wa.me/6288200665565" class="w-10 h-10 bg-zinc-800 hover:bg-zinc-700 rounded-lg flex items-center justify-center transition-all hover:scale-110">
+              <i class="fa-brands fa-whatsapp"></i>
             </a>
           </div>
         </div>
 
-        <!-- Quick Links -->
         <div>
-          <h3 class="font-semibold mb-4">Quick Links</h3>
+          <h3 class="font-semibold mb-4 text-cyan-400">Quick Links</h3>
           <ul class="space-y-2">
-            <li><a href="#about" class="text-gray-400 hover:text-white transition-colors duration-300">About</a></li>
-            <li><a href="#skills" class="text-gray-400 hover:text-white transition-colors duration-300">Skills</a></li>
-            <li><a href="#projects" class="text-gray-400 hover:text-white transition-colors duration-300">Projects</a></li>
-            <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors duration-300">Contact</a></li>
+            <li><a href="#about" class="text-gray-400 hover:text-cyan-400 transition-colors text-sm">About Me</a></li>
+            <li><a href="#skills" class="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Skills</a></li>
+            <li><a href="#projects" class="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Projects</a></li>
+            <li><a href="#contact" class="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Contact</a></li>
           </ul>
         </div>
 
-        <!-- Services -->
         <div>
-          <h3 class="font-semibold mb-4">Services</h3>
-          <ul class="space-y-2">
-            <li><span class="text-gray-400">Web Development</span></li>
-            <li><span class="text-gray-400">Mobile Apps</span></li>
-            <li><span class="text-gray-400">UI/UX Design</span></li>
-            <li><span class="text-gray-400">Consulting</span></li>
+          <h3 class="font-semibold mb-4 text-cyan-400">Fun Facts</h3>
+          <ul class="space-y-2 text-sm text-gray-400">
+            <li>☕ Powered by Coffee</li>
+            <li>🎨 Tailwind > Bootstrap</li>
+            <li>🔒 Learning Security</li>
+            <li>🚀 Open to Collaborate</li>
           </ul>
         </div>
       </div>
 
-      <!-- Bottom Bar -->
-      <div class="border-t border-gray-800 pt-8 flex flex-col sm:flex-row justify-between items-center">
+      <div class="border-t border-zinc-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
         <p class="text-gray-400 text-sm">
-          &copy; 2025 M. Abdillah Aljazani. Crafted with ❤️ and lots of ☕
+          &copy; 2025 JZX. Built with React, Tailwind & lots of ☕
         </p>
-        <div class="flex space-x-6 mt-4 sm:mt-0">
-          <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors duration-300">Privacy Policy</a>
-          <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors duration-300">Terms of Service</a>
-        </div>
+        <p class="text-gray-500 text-xs">
+          Made with 💙 by a developer who loves clean code
+        </p>
       </div>
     </div>
   </footer>
 
-  <!-- JavaScript -->
   <script>
-    // Theme Toggle
-    const themeToggle = document.getElementById('theme-toggle');
-    const html = document.documentElement;
-    
-    // Check for saved theme preference or default to light mode
-    const currentTheme = localStorage.getItem('theme') || 'light';
-    html.classList.toggle('dark', currentTheme === 'dark');
-    themeToggle.innerHTML = currentTheme === 'dark' ? '<span class="text-xl">☀️</span>' : '<span class="text-xl">🌙</span>';
-    
-    themeToggle.addEventListener('click', () => {
-      html.classList.toggle('dark');
-      const isDark = html.classList.contains('dark');
-      localStorage.setItem('theme', isDark ? 'dark' : 'light');
-      themeToggle.innerHTML = isDark ? '<span class="text-xl">☀️</span>' : '<span class="text-xl">🌙</span>';
-    });
-
-    // Mobile Menu Toggle
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileToggle = document.getElementById('mobile-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
-    
-    mobileMenuBtn.addEventListener('click', () => {
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    mobileToggle.addEventListener('click', () => {
       mobileMenu.classList.toggle('translate-x-full');
     });
 
-    // Close mobile menu when clicking on a link
-    document.querySelectorAll('.mobile-link').forEach(link => {
+    mobileLinks.forEach(link => {
       link.addEventListener('click', () => {
         mobileMenu.classList.add('translate-x-full');
       });
     });
 
-    // Scroll Progress
-    const scrollProgress = document.getElementById('scroll-progress');
-    
-    window.addEventListener('scroll', () => {
-      const scrollTop = window.pageYOffset;
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const scrollPercent = (scrollTop / docHeight) * 100;
-      scrollProgress.style.width = scrollPercent + '%';
+    // Smooth Scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
     });
 
-    // Intersection Observer for animations
+    // Cursor Glow Effect
+    const cursorGlow = document.getElementById('cursor-glow');
+    let mouseX = 0, mouseY = 0;
+    let glowX = 0, glowY = 0;
+
+    document.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    });
+
+    function animateGlow() {
+      glowX += (mouseX - glowX) * 0.1;
+      glowY += (mouseY - glowY) * 0.1;
+      cursorGlow.style.left = glowX + 'px';
+      cursorGlow.style.top = glowY + 'px';
+      requestAnimationFrame(animateGlow);
+    }
+    animateGlow();
+
+    // Form Submission
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const btn = this.querySelector('button[type="submit"]');
+      const originalText = btn.textContent;
+      
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+      
+      setTimeout(() => {
+        alert('Thank you! I\'ll get back to you soon 🚀');
+        this.reset();
+        btn.textContent = originalText;
+        btn.disabled = false;
+      }, 1500);
+    });
+
+    // Scroll Reveal Animation
     const observerOptions = {
       threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
+      rootMargin: '0px 0px -100px 0px'
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -657,117 +815,27 @@
       });
     }, observerOptions);
 
-    // Observe fade-in elements
-    document.querySelectorAll('.fade-in').forEach(el => {
-      el.style.opacity = '0';
-      el.style.transform = 'translateY(30px)';
-      el.style.transition = 'all 0.6s ease-out';
-      observer.observe(el);
+    document.querySelectorAll('section').forEach(section => {
+      section.style.opacity = '0';
+      section.style.transform = 'translateY(20px)';
+      section.style.transition = 'all 0.6s ease-out';
+      observer.observe(section);
     });
 
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
-        }
-      });
-    });
-
-    // Form submission
-    document.getElementById('contact-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      // Simple form validation and submission simulation
-      const formData = new FormData(this);
-      const name = formData.get('name');
-      const email = formData.get('email');
-      const message = formData.get('message');
-      
-      if (name && email && message) {
-        // Simulate form submission
-        const submitBtn = this.querySelector('button[type="submit"]');
-        const originalText = submitBtn.textContent;
-        
-        submitBtn.textContent = 'Sending...';
-        submitBtn.disabled = true;
-        
-        setTimeout(() => {
-          alert('Thank you for your message! I\'ll get back to you soon.');
-          this.reset();
-          submitBtn.textContent = originalText;
-          submitBtn.disabled = false;
-        }, 2000);
-      }
-    });
-
-    // Add stagger animation delays to elements
-    document.addEventListener('DOMContentLoaded', () => {
-      const fadeElements = document.querySelectorAll('.fade-in');
-      fadeElements.forEach((el, index) => {
-        el.style.animationDelay = `${index * 0.1}s`;
-      });
-    });
-
-    // Navbar background on scroll
-    const navbar = document.querySelector('nav');
+    // Parallax Effect on Scroll
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 100) {
-        navbar.classList.add('shadow-lg');
-      } else {
-        navbar.classList.remove('shadow-lg');
-      }
+      const scrolled = window.pageYOffset;
+      const parallaxElements = document.querySelectorAll('.space-y-8, .space-y-6');
+      parallaxElements.forEach((el, index) => {
+        const speed = 0.5 + (index * 0.1);
+        el.style.transform = `translateY(${scrolled * speed * 0.01}px)`;
+      });
     });
 
-    // Add hover effect to skill cards
-    document.querySelectorAll('.group').forEach(card => {
-      card.addEventListener('mouseenter', () => {
-        card.style.transform = 'translateY(-8px) scale(1.02)';
-      });
-      
-      card.addEventListener('mouseleave', () => {
-        card.style.transform = 'translateY(0) scale(1)';
-      });
-    });
+    // Profile View Counter (from README badge)
+    console.log('%c👋 Hey there, fellow developer!', 'color: #06b6d4; font-size: 20px; font-weight: bold;');
+    console.log('%cThanks for checking out my portfolio!', 'color: #10b981; font-size: 14px;');
+    console.log('%cInterested in collaboration? Let\'s connect! 🚀', 'color: #06b6d4; font-size: 14px;');
   </script>
-
-  <style>
-    /* Custom animation delays */
-    .animation-delay-200 { animation-delay: 0.2s; }
-    .animation-delay-400 { animation-delay: 0.4s; }
-    .animation-delay-600 { animation-delay: 0.6s; }
-    .animation-delay-800 { animation-delay: 0.8s; }
-    .animation-delay-1000 { animation-delay: 1s; }
-    .animation-delay-2000 { animation-delay: 2s; }
-    .animation-delay-4000 { animation-delay: 4s; }
-    
-    /* Smooth transitions for all interactive elements */
-    * {
-      transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-    }
-    
-    /* Hide scrollbar but keep functionality */
-    ::-webkit-scrollbar {
-      width: 8px;
-    }
-    
-    ::-webkit-scrollbar-track {
-      background: transparent;
-    }
-    
-    ::-webkit-scrollbar-thumb {
-      background: linear-gradient(45deg, #3b82f6, #8b5cf6);
-      border-radius: 4px;
-    }
-    
-    ::-webkit-scrollbar-thumb:hover {
-      background: linear-gradient(45deg, #2563eb, #7c3aed);
-    }
-  </style>
 </body>
 </html>
