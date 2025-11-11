@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JZX | Full-Stack Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <link rel="icon" href="logoku.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'sans': ['Space Grotesk', 'sans-serif'],
+            'mono': ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            'accent': {
+              500: '#06b6d4',
+              600: '#0891b2',
+            }
+          }
+        }
+      },
+      darkMode: 'class'
+    }
+  </script>
+</head>
+<body class="bg-zinc-950 text-gray-100 font-sans antialiased">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="0" height="0">
+    <defs>
+      <filter id="goo">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur" />
+        <feColorMatrix in="blur" mode="matrix"
+          values="1 0 0 0 0  
+                  0 1 0 0 0  
+                  0 0 1 0 0  
+                  0 0 0 35 -15"
+          result="goo" />
+        <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+      </filter>
+    </defs>
+  </svg>
+
+  <!-- Cursor elemen -->
+  <div id="cursor" class="Cursor"></div>
+
+  <!-- Navigation -->
+  <div id="navigation"></div>
+
+  <!-- Hero Section -->
+  <div id="hero-section"></div>
+
+  <!-- About Section -->
+  <div id="about-section"></div>
+
+  <!-- Skills Section -->
+  <div id="skills-section"></div>
+
+  <!-- Projects Section -->
+  <div id="projects-section"></div>
+
+  <!-- Contact Section -->
+  <div id="contact-section"></div>
+
+  <!-- Footer -->
+  <div id="footer-section"></div>
+
+  <script>
+    async function loadComponent(elementId, filePath) {
+      try {
+        const response = await fetch(filePath);
+        const html = await response.text();
+        document.getElementById(elementId).innerHTML = html;
+      } catch (error) {
+        console.error(`Error loading ${filePath}:`, error);
+      }
+    }
+
+    // Load all components
+    async function loadAllComponents() {
+      await loadComponent('navigation', 'components/navigation.html');
+      await loadComponent('hero-section', 'components/hero.html');
+      await loadComponent('about-section', 'components/about.html');
+      await loadComponent('skills-section', 'components/skills.html');
+      await loadComponent('projects-section', 'components/projects.html');
+      await loadComponent('contact-section', 'components/contact.html');
+      await loadComponent('footer-section', 'components/footer.html');
+      
+      initializeScripts();
+    }
+
+    function initializeScripts() {
+      const script = document.createElement('script');
+      script.src = 'script.js';
+      document.body.appendChild(script);
+    }
+
+    document.addEventListener('DOMContentLoaded', loadAllComponents);
+  </script>
+</body>
+</html>
